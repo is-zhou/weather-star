@@ -24,12 +24,13 @@
 
 .searchBox {
   display: flex;
+  box-sizing: border-box;
   height: 35px;
-  width: 25vw;
+  width: 20vw;
   border: 1px solid rgba(22, 25, 34, 0.2);
-  margin-top: 10px;
+  margin-left: 5px;
   border-radius: 20px;
-  padding: 0 10px;
+  padding-right: 10px;
   min-width: 220px;
   /* background-color: rgba(22, 25, 34, 0.1); */
   background-color: rgba(243, 241, 241, 0.5);
@@ -49,14 +50,16 @@
   outline: none;
   background: none;
   color: #fff;
-  font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
 }
 .addressList {
   display: block;
-  display: none;
+  box-sizing: border-box;
+  margin-left: 5px;
+  height: 365px;
+  overflow: auto;
   padding: 10px;
-  width: 25vw;
+  width: 20vw;
   border-radius: 20px;
   border: 1px solid rgba(22, 25, 34, 0.2);
   background-color: rgba(243, 241, 241, 0.5);
@@ -94,14 +97,15 @@
 }
 
 .weatherInfoBox {
+  display: flex;
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 55vw;
+  width: 70vw;
   height: 400px;
   min-width: 400px;
-  background-color: rgba(22, 25, 34, 0.5);
 }
 .weatherInfoBox .dateInfoBox {
   display: flex;
@@ -119,6 +123,7 @@
   display: flex;
   box-sizing: border-box;
   padding: 10px 0;
+  background-color: rgba(22, 25, 34, 0.5);
 }
 .weather div {
   flex: 1;
