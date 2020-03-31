@@ -1,0 +1,146 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/spring20200311.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 60px;
+  /* border: 1px solid red; */
+}
+.header h1 {
+  color: #fff;
+  font-size: 18px;
+}
+.header h1 img {
+  margin-right: 10px;
+  width: 50px;
+  vertical-align: middle;
+}
+
+.searchBox {
+  display: flex;
+  height: 35px;
+  width: 25vw;
+  border: 1px solid rgba(22, 25, 34, 0.2);
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 0 10px;
+  min-width: 220px;
+  /* background-color: rgba(22, 25, 34, 0.1); */
+  background-color: rgba(243, 241, 241, 0.5);
+}
+.searchBox div {
+  width: 20px;
+  height: 100%;
+  background-image: url(../img/index_03.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 15px;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+.addressList {
+  display: block;
+  display: none;
+  padding: 10px;
+  width: 25vw;
+  border-radius: 20px;
+  border: 1px solid rgba(22, 25, 34, 0.2);
+  background-color: rgba(243, 241, 241, 0.5);
+  min-width: 220px;
+}
+.hotAddr p {
+  font-size: 14px;
+}
+.hotAddr .city {
+  display: block;
+  background-image: url(../img/index_03.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  color: #fff;
+  margin: 8px 10px;
+}
+.ls-city {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 8px 10px;
+}
+.ls-city .opts {
+  display: block;
+  padding: 10px 20px 0 0;
+  font-size: 14px;
+}
+.ls-data-city {
+  font-size: 14px;
+  color: white;
+}
+.ls-data-city li {
+  padding: 10px 30px 0 0;
+  display: block;
+}
+
+.weatherInfoBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55vw;
+  height: 400px;
+  min-width: 400px;
+  background-color: rgba(22, 25, 34, 0.5);
+}
+.weatherInfoBox .dateInfoBox {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  color: #fff;
+}
+.weatherInfoBox .weather {
+  height: 360px;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.weather div {
+  flex: 1;
+  text-align: center;
+
+  border-right: 1px solid white;
+  box-sizing: border-box;
+}
+.weather div:last-child {
+  border-right: 0px;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -674px;
+  z-index: -10;
+  width: 1349px;
+  height: 635px;
+  object-fit: fill;
+}
+.weather li {
+  padding: 10px 0;
+  color: #fff;
+}
