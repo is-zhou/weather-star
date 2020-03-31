@@ -186,6 +186,13 @@
       var timeoutID="";
       inputCity.onfocus=function(){
         addressList.style.display="block";
+        if(this.value==""){
+          lshotcity.style.display=="none"?lshotcity.style.display="flex":""
+          lsdatacity.style.display="none";
+        }else{
+          lsdatacity.style.display="block";
+        }
+        
       }
       inputCity.onblur=function(){
         addressList.style.display="none";
@@ -194,6 +201,8 @@
         clearTimeout(timeoutID);
         var cityName=this.value;
         if(cityName==""){
+          lshotcity.style.display="flex";
+            lsdatacity.style.display="none";
             return;
         }
         timeoutID=setTimeout(()=>{
@@ -208,6 +217,7 @@
               html=template('addrtemp2',{msg:"未搜索到"});
             }
             lshotcity.style.display="none";
+            lsdatacity.style.display="block";
             lsdatacity.innerHTML=html
             console.log(html);
             
