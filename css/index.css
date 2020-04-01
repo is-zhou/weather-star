@@ -1,6 +1,6 @@
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 700px;
   background-image: url(../img/spring20200311.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,6 +9,8 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  width: 80vw;
+  margin: 0 auto;
   padding: 10px 60px;
   /* border: 1px solid red; */
 }
@@ -56,7 +58,7 @@
   display: block;
   box-sizing: border-box;
   margin-left: 5px;
-  height: 365px;
+  height: 360px;
   overflow: auto;
   padding: 10px;
   width: 20vw;
@@ -73,7 +75,8 @@
   background-image: url(../img/index_03.png);
   background-repeat: no-repeat;
   background-position: top right;
-  color: #fff;
+  color: rgb(255, 168, 6);
+  font-weight: 700;
   margin: 8px 10px;
 }
 .ls-city {
@@ -86,6 +89,7 @@
   display: block;
   padding: 10px 20px 0 0;
   font-size: 14px;
+  cursor: pointer;
 }
 .ls-data-city {
   font-size: 14px;
@@ -94,6 +98,7 @@
 .ls-data-city li {
   padding: 10px 30px 0 0;
   display: block;
+  cursor: pointer;
 }
 
 .weatherInfoBox {
@@ -103,7 +108,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70vw;
+  width: 80vw;
   height: 400px;
   min-width: 400px;
 }
@@ -122,6 +127,7 @@
   height: 360px;
   display: flex;
   box-sizing: border-box;
+  font-size: 14px;
   padding: 10px 0;
   background-color: rgba(22, 25, 34, 0.5);
 }
@@ -129,8 +135,11 @@
   flex: 1;
   text-align: center;
 
-  border-right: 1px solid white;
+  border-right: 1px solid rgb(214, 214, 214);
   box-sizing: border-box;
+}
+.weather div:nth-child(2) {
+  background-color: rgba(22, 25, 34, 0.8);
 }
 .weather div:last-child {
   border-right: 0px;

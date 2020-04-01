@@ -1,9 +1,10 @@
-function ajax(options) {
+function myJSONP(options) {
   var script = document.createElement("script");
   var params = "";
   for (const attar in options.data) {
-    params += "source=pc&" + attar + "=" + options.data[attar] + "&";
+    params += attar + "=" + options.data[attar] + "&";
   }
+  params = "?source=pc&" + params;
   var callbackName =
     "weatherStar" +
     Math.random()

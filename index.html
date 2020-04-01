@@ -20,12 +20,7 @@
       <!-- 头部开始 -->
       <div class="header">
         <div>
-          <h1>
-            <img
-              src="./img/sun-smile-glasses-icon_128.png"
-              alt="天气星人"
-            />天气星人
-          </h1>
+          <h1><img src="./img/logo_h.png" alt="天气星人" />天气星人</h1>
         </div>
       </div>
       <!-- 头部结束 -->
@@ -35,88 +30,12 @@
         <!-- 七天天气信息面板-->
         <div>
           <div class="dateInfoBox">
-            <div class="date">2020年3月31日</div>
+            <div class="dateInfoBoxDate" id="dateInfoBoxDate">
+              2020年3月31日
+            </div>
             <div class="more">更多</div>
           </div>
-          <div class="weather">
-            <div>
-              <ul>
-                <li>昨天</li>
-                <li>3月30日</li>
-                <li>℃</li>
-                <li><img src="./img/w0.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>今天</li>
-                <li>3月31日</li>
-                <li>℃</li>
-                <li><img src="./img/w0.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>明天</li>
-                <li>4月1日</li>
-                <li>℃</li>
-                <li><img src="./img/w1.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>周四</li>
-                <li>4月2日</li>
-                <li>℃</li>
-                <li><img src="./img/w0.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>周五</li>
-                <li>4月3日</li>
-                <li>℃</li>
-                <li><img src="./img/w7.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>周五</li>
-                <li>4月3日</li>
-                <li>℃</li>
-                <li><img src="./img/w0.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>周五</li>
-                <li>4月3日</li>
-                <li>℃</li>
-                <li><img src="./img/w0.png" alt="" width="50%" /></li>
-                <li>晴</li>
-                <li>风</li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
+          <div class="weather" id="weather"></div>
         </div>
         <!-- 七天天气信息面板   结束-->
         <!-- 地点选择开始 -->
@@ -124,102 +43,97 @@
           <div>
             <div class="searchBox">
               <div class=""></div>
-              <input
-                type="search"
-                id="inputCity"
-                placeholder="请输入城市"
-                value="北京 北京市"
-              />
+              <input type="search" id="inputCity" placeholder="请输入城市" />
             </div>
             <div id="addressList" class="addressList">
               <div class="hotAddr">
-                <p>当前定位</p>
-                <p class="city">北京 北京市</p>
+                <p>当前城市</p>
+                <p class="city" id="city">北京 北京市</p>
                 <p>热门城市</p>
                 <ul id="ls-hot-city" class="ls-city">
                   <li class="opts" data-province="北京" data-city="北京">
-                    <span>北京</span>
+                    北京
                   </li>
                   <li class="opts" data-province="上海" data-city="上海">
-                    <span>上海</span>
+                    上海
                   </li>
                   <li class="opts" data-province="广东" data-city="广州">
-                    <span>广州</span>
+                    广州
                   </li>
                   <li class="opts" data-province="广东" data-city="深圳">
-                    <span>深圳</span>
+                    深圳
                   </li>
                   <li class="opts" data-province="天津" data-city="天津">
-                    <span>天津</span>
+                    天津
                   </li>
                   <li class="opts" data-province="陕西" data-city="西安">
-                    <span>西安</span>
+                    西安
                   </li>
                   <li class="opts" data-province="湖北" data-city="武汉">
-                    <span>武汉</span>
+                    武汉
                   </li>
                   <li class="opts" data-province="四川" data-city="成都">
-                    <span>成都</span>
+                    成都
                   </li>
                   <li class="opts" data-province="河北" data-city="石家庄">
-                    <span>石家庄</span>
+                    石家庄
                   </li>
                   <li class="opts" data-province="河南" data-city="郑州">
-                    <span>郑州</span>
+                    郑州
                   </li>
                   <li class="opts" data-province="黑龙江" data-city="哈尔滨">
-                    <span>哈尔滨</span>
+                    哈尔滨
                   </li>
                   <li class="opts" data-province="山西" data-city="太原">
-                    <span>太原</span>
+                    太原
                   </li>
                   <li class="opts" data-province="新疆" data-city="乌鲁木齐">
-                    <span>乌鲁木齐</span>
+                    乌鲁木齐
                   </li>
                   <li class="opts" data-province="山东" data-city="济南">
-                    <span>济南</span>
+                    济南
                   </li>
                   <li class="opts" data-province="福建" data-city="福州">
-                    <span>福州</span>
+                    福州
                   </li>
                   <li class="opts" data-province="西藏" data-city="日喀则">
-                    <span>日喀则</span>
+                    日喀则
                   </li>
                   <li class="opts" data-province="福建" data-city="厦门">
-                    <span>厦门</span>
+                    厦门
                   </li>
                   <li class="opts" data-province="山东" data-city="青岛">
-                    <span>青岛</span>
+                    青岛
                   </li>
                   <li class="opts" data-province="江苏" data-city="扬州">
-                    <span>扬州</span>
+                    扬州
                   </li>
                   <li class="opts" data-province="安徽" data-city="合肥">
-                    <span>合肥</span>
+                    合肥
                   </li>
                   <li class="opts" data-province="重庆" data-city="重庆">
-                    <span>重庆</span>
+                    重庆
                   </li>
                   <li class="opts" data-province="江西" data-city="南昌">
-                    <span>南昌</span>
+                    南昌
                   </li>
                   <li class="opts" data-province="河北" data-city="唐山">
-                    <span>唐山</span>
+                    唐山
                   </li>
                   <li class="opts" data-province="浙江" data-city="杭州">
-                    <span>杭州</span>
+                    杭州
                   </li>
                   <li class="opts" data-province="河北" data-city="邢台">
-                    <span>邢台</span>
+                    邢台
                   </li>
                   <li class="opts" data-province="辽宁" data-city="沈阳">
-                    <span>沈阳</span>
+                    沈阳
                   </li>
                   <li class="opts" data-province="河北" data-city="邯郸">
-                    <span>邯郸</span>
+                    邯郸
                   </li>
                   <li class="opts" data-province="云南" data-city="昆明">
-                    <span>昆明</span>
+                    昆明
                   </li>
                 </ul>
                 <ul id="ls-data-city" class="ls-data-city"></ul>
@@ -237,12 +151,30 @@
     <script src="./js/request.js"></script>
     <script id="addrtemp" type="text/html">
        {{each address.data}}
-          <li><span> {{$value}}</span></li>
+          <li data-city="{{$value}}">  {{$value}}  </li>
       {{/each}}
     </script>
     <script id="addrtemp2" type="text/html">
 
-      <li><span> {{msg}}</span></li>
+      <li>  {{msg}}  </li>
+    </script>
+    <script id="forecast_24htemp" type="text/html">
+      {{each forecast_24h}}
+      <div>
+
+        <ul>
+          <li>{{$value.index}}{{getData($value.time)}}</li>
+          <li>{{$value.time}}</li>
+          <li>{{$value.max_degree}}℃</li>
+          <li>
+            <img src="{{getWeatherImg($value.day_weather_code)}}" alt="" width="50%" />
+          </li>
+          <li>{{$value.day_weather}}</li>
+          <li>{{$value.day_wind_direction}} {{$value.day_wind_power}} 级</li>
+          <li></li>
+        </ul>
+      </div>
+      {{/each}}
     </script>
 
     <script src="./js/address.js"></script>
