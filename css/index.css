@@ -78,6 +78,27 @@
     color: white;
     margin: 8px 10px;
 }
+.selectedCityBox {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.selectedCityBox li {
+    position: relative;
+    padding: 5px;
+    font-size: 12px;
+    background-color: rgba(182, 40, 40, 0.5);
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.selectedCityBox li::after {
+    content: "x";
+    position: absolute;
+    top: -7px;
+    right: -3px;
+    font-size: 6px;
+}
 .ls-city {
     display: flex;
     flex-wrap: wrap;
@@ -121,14 +142,22 @@
     font-size: 14px;
     color: #fff;
 }
+#tips {
+    cursor: not-allowed !important;
+}
 #concern_city {
     display: flex;
     margin-left: 10px;
 }
-#concern_city li {
+#concern_city .attention {
     display: block;
     margin: 0 10px;
     position: relative;
+    cursor: pointer;
+    transition: all 1ms;
+}
+#concern_city .attention:hover {
+    transform: scale(1.1, 1.1);
 }
 #concern_city li::before {
     content: " ";

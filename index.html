@@ -50,7 +50,12 @@
                             <div>我关注 <i></i> 的城市</div>
                             <div class="concern_city" id="">
                                 <ul id="concern_city">
-                                    <li id="tips">
+                                    <li
+                                        id="tips"
+                                        disabled="disabled"
+                                        data-province="北京"
+                                        data-city="北京"
+                                    >
                                         还没有关注的城市快去关注吧
                                     </li>
                                 </ul>
@@ -59,7 +64,7 @@
                         <!-- 当前已经关注了的城市列表 -->
 
                         <!-- 添加关注城市按钮 -->
-                        <div class="more" id="more">添加城市</div>
+                        <div class="more" id="more">管理关注</div>
                         <!-- 添加关注城市按钮 -->
                     </div>
 
@@ -87,9 +92,13 @@
                     </div>
                     <div id="addressList" class="addressList">
                         <div class="hotAddr">
-                            <p>当前城市</p>
+                            <p id="addresstitle1">当前城市</p>
                             <p class="city" id="city">北京 北京市</p>
-                            <p>选择城市</p>
+                            <ul
+                                class="selectedCityBox"
+                                id="selectedCityBox"
+                            ></ul>
+                            <p id="addresstitle2">选择城市</p>
                             <ul id="ls-hot-city" class="ls-city">
                                 <li
                                     class="opts"
@@ -366,7 +375,8 @@
             </div>
         </script>
         <!--结束 当前天气信息模板 -->
-
+        <script src="./js/addAttention.js"></script>
+        <script src="./js/tools.js"></script>
         <script src="./js/address.js"></script>
     </body>
 </html>
