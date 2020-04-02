@@ -1,0 +1,34 @@
+.choose1 {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    transition: all 15s;
+}
+.weatherInfoBox1 {
+    animation-name: move2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    transition: all 15s;
+}
+@keyframes move {
+    0% {
+        z-index: 999;
+        transform: scale(0.91, 0.91) translate(0, 0);
+    }
+    5% {
+        transform: scale(0.91, 0.91) translate(0, 20px);
+    }
+    10% {
+        transform: scale(0.91, 0.91) translate(0, 20px);
+    }
+    100% {
+        z-index: 999;
+        transform: scale(0.91, 0.91) translate(-240%, 20px);
+    }
+}
+@keyframes move2 {
+    100% {
+        transform: translateX(10%);
+    }
+}

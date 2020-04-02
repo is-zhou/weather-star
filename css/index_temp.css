@@ -1,0 +1,60 @@
+.life_index {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.lifeIndexImg {
+    display: flex;
+    flex-direction: column;
+    min-width: 67px;
+    margin: 5px 1px;
+    /* border: 1px solid ghostwhite; */
+    text-align: center;
+}
+
+.lifeIndexImg i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/sprite-7d98dbada9.png);
+    background-repeat: no-repeat;
+    background-size: 200px !important;
+    vertical-align: sub;
+    margin-right: 8px;
+    margin: 0 auto;
+}
+.lifeIndextitle {
+    font-size: 8px;
+    color: rgb(175, 214, 240);
+}
+.lifeIndexcontent {
+    font-size: 14px;
+    color: aliceblue;
+}
+.indexImg1 {
+    background-position: -63px 4px;
+}
+.indexImg2 {
+    background-position: 4px -128px;
+}
+.indexImg3 {
+    background-position: -60px -128px;
+}
+.indexImg4 {
+    background-position: -130px -90px;
+}
+.indexImg5 {
+    background-position: -31px -30px;
+}
+.indexImg6 {
+    background-position: 3px -34px;
+}
+.indexImg7 {
+    background-position: -98px -59px;
+}
+.indexImg8 {
+    background-position: -29px -96px;
+}
+.indexImg9 {
+    background-position: -60px -62px;
+}
