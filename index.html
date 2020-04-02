@@ -321,7 +321,7 @@
         <!--开始 七天天气信息模板 -->
         <script id="forecast_24htemp" type="text/html">
             {{each forecast_24h}}
-              <div>
+              <div class="forecast24h">
                 <ul>
                   <li>{{$value.index}}{{getData($value.time)}}</li>
                   <li>{{$value.time}}</li>

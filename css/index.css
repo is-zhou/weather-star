@@ -258,8 +258,6 @@
     display: flex;
     box-sizing: border-box;
     font-size: 14px;
-    padding: 0 0;
-    background-color: rgba(22, 25, 34, 0.5);
 }
 .dateInfoBoxDate img {
     display: inline-block;
@@ -281,6 +279,10 @@
     box-shadow: 1px 1px 1px 1px gray;
     border-radius: 10px;
     cursor: pointer;
+}
+.forecast24h:hover {
+    transform: scale(0.98, 0.98);
+    background-color: rgba(22, 25, 34, 0.8);
 }
 .weather div:nth-child(1) li {
     color: gray !important;
