@@ -9,7 +9,14 @@ function setCurrent(data) {
         limit: data.data.limit
     });
 }
-
+function setForecast_24htemp(data) {
+    var html = template("forecast_24htemp", {
+        forecast_24h: data.data.forecast_24h
+    });
+    weathers.innerHTML = html;
+    inputCity.value = "";
+    cc.innerText = city;
+}
 /**
  *日期格式转换函数
  * @param {String} date日期字符串 202004021330
@@ -93,37 +100,37 @@ function setIndexImg(name) {
 }
 //星期装换
 function getData(params) {
-  return "星期" + "日一二三四五六".charAt(new Date(params).getDay());
+    return "星期" + "日一二三四五六".charAt(new Date(params).getDay());
 }
 //根据天气类型选择对应的图片
 function getWeatherImg(params) {
-  switch (params) {
-      case "01":
-          return "./img/w1.png";
-          break;
-      case "02":
-          return "./img/w2.png";
-          break;
-      case "03":
-          return "./img/w3.png";
-          break;
-      case "04":
-          return "./img/w4.png";
-          break;
-      case "07":
-          return "./img/w7.png";
-          break;
-      case "08":
-          return "./img/w8.png";
-          break;
-      case "09":
-          return "./img/w9.png";
-          break;
-      default:
-          return "./img/w0.png";
-          break;
-  }
-  return "星期" + "日一二三四五六".charAt(new Date(params).getDay());
+    switch (params) {
+        case "01":
+            return "./img/w1.png";
+            break;
+        case "02":
+            return "./img/w2.png";
+            break;
+        case "03":
+            return "./img/w3.png";
+            break;
+        case "04":
+            return "./img/w4.png";
+            break;
+        case "07":
+            return "./img/w7.png";
+            break;
+        case "08":
+            return "./img/w8.png";
+            break;
+        case "09":
+            return "./img/w9.png";
+            break;
+        default:
+            return "./img/w0.png";
+            break;
+    }
+    return "星期" + "日一二三四五六".charAt(new Date(params).getDay());
 }
 template.defaults.imports.getData = getData;
 template.defaults.imports.dateFormt = dateFormt;

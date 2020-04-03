@@ -1,0 +1,19 @@
+.alarmBox {
+    display: flex;
+    overflow: hidden;
+}
+
+.alarmBox li {
+    display: block;
+    padding: 3px 8px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    font-size: 12px;
+    margin: 13px 10px 0;
+    cursor: pointer;
+    animation: alarmBox_move;
+    animation-duration: 1s;
+    transition: all 1s;
+}

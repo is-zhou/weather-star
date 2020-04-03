@@ -7,9 +7,9 @@
 }
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     box-sizing: border-box;
-    width: 80vw;
+    width: 1050px;
     margin: 0 auto;
     padding: 10px 60px;
     /* border: 1px solid red; */
@@ -129,7 +129,6 @@
     margin: 0 auto;
     width: 1050px;
     height: 415px;
-    min-width: 800px;
 }
 .weatherInfoBox .dateInfoBox {
     display: flex;

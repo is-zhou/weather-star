@@ -115,8 +115,6 @@ lshotcity.addEventListener("click", function(event) {
         successs: function(data) {
             cityt.innerHTML = event.target.getAttribute("data-city");
             renderData(data);
-            setCurrent(data);
-            setIndexTemp(data);
         }
     });
 });
@@ -163,8 +161,6 @@ lsdatacity.addEventListener("click", function(event) {
             lshotcity.style.display = "none";
             life_index.style.display = "flex";
             renderData(data);
-            setCurrent(data);
-            setIndexTemp(data);
         }
     });
 });
@@ -185,20 +181,9 @@ myJSONP({
         city = "北京 ";
         cityt.innerHTML = "北京 北京";
         renderData(data);
-        //渲染当前天气数据
-        setCurrent(data);
-        //渲染生活指数数据
-        setIndexTemp(data);
     }
 });
-function renderData(data) {
-    var html = template("forecast_24htemp", {
-        forecast_24h: data.data.forecast_24h
-    });
-    weathers.innerHTML = html;
-    inputCity.value = "";
-    cc.innerText = city;
-}
+
 //我的关注城市列表的点击事件点击后发送天气请求
 concern_city.onclick = function(event) {
     city = event.target.getAttribute("data-city");
@@ -216,8 +201,16 @@ concern_city.onclick = function(event) {
         successs: function(data) {
             cityt.innerHTML = event.target.getAttribute("data-city");
             renderData(data);
-            setCurrent(data);
-            setIndexTemp(data);
         }
     });
 };
+/**
+ * 请求成功后调用此方法渲染数据（所有向模板渲染数据操作放入次方法）
+ * @param {Obj} data 请求结果参数
+ */
+function renderData(data) {
+    setForecast_24htemp(data);
+    setCurrent(data);
+    setIndexTemp(data);
+    setAlarm(data);
+}
