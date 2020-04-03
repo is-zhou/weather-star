@@ -2,14 +2,14 @@
     animation-name: move;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    transition: all 15s;
+    transition: all 3s;
 }
 .weatherInfoBox1 {
     animation-name: move2;
     animation-duration: 3s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    transition: all 15s;
+    transition: all 3s;
 }
 @keyframes move {
     0% {

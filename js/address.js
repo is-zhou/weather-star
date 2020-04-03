@@ -35,7 +35,7 @@ inputCity.onfocus = function() {
     }
     life_index.style.display = "none";
 };
-
+//添加关注城市
 more.onclick = function() {
     isAddAttention ? (isAddAttention = false) : (isAddAttention = true);
     if (isAddAttention) {
@@ -64,7 +64,7 @@ more.onclick = function() {
     }
 };
 inputCity.onblur = function(params) {};
-// 获取城市信息
+// 获取城市信息（输入搜索城市信息）
 inputCity.oninput = function() {
     clearTimeout(timeoutID);
     var cityName = this.value;
@@ -93,7 +93,7 @@ inputCity.oninput = function() {
         });
     }, 300);
 };
-
+//热门城市列表点击事件（发送对应天气的请求）
 lshotcity.addEventListener("click", function(event) {
     county = "";
     city = event.target.getAttribute("data-city");
@@ -199,6 +199,7 @@ function renderData(data) {
     inputCity.value = "";
     cc.innerText = city;
 }
+//我的关注城市列表的点击事件点击后发送天气请求
 concern_city.onclick = function(event) {
     city = event.target.getAttribute("data-city");
     province = event.target.getAttribute("data-province");
