@@ -333,10 +333,12 @@
         <!--开始  天气预警模板 -->
         <script id="alarmtemp" type="text/html">
              {{each alarm}}
-           
              <li class="" style="background-color: {{setAlarmColor($value.level_name)}}">
-
              {{$value.type_name}}{{$value.level_name}}预警
+             <ul class="alarmDetail">
+                 <li style="color: {{setAlarmColor($value.level_name)}}">{{$value.type_name}}{{$value.level_name}}预警</li>
+                 <li>{{$value.detail}}</li>
+                </ul>
             </li>
 
             {{/each}}

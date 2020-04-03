@@ -9,13 +9,13 @@ function setAlarmColor(alarmText) {
 
     switch (alarmText) {
         case "红色":
-            return "brown";
+            return "rgb(233, 36, 36)";
             break;
         case "橙色":
             return "orangered";
             break;
         case "蓝色":
-            return "rgb(54, 54, 245)";
+            return "cornflowerblue";
             break;
         default:
             break;

@@ -1,12 +1,13 @@
 .alarmBox {
     display: flex;
-    overflow: hidden;
 }
 
-.alarmBox li {
+.alarmBox > li {
     display: block;
-    padding: 3px 8px;
-    height: 15px;
+    width: 112px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
     border-radius: 10px;
     background-color: brown;
     color: white;
@@ -16,4 +17,34 @@
     animation: alarmBox_move;
     animation-duration: 1s;
     transition: all 1s;
+    position: relative;
+}
+
+.alarmDetail {
+    position: absolute;
+    display: none;
+    width: 200px;
+    top: 30px;
+    left: -45%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px grey;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation-name: alarmDetail_move;
+    animation-duration: 600ms;
+}
+.alarmDetail li {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    text-align: start;
+}
+.alarmDetail li:nth-child(1) {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 10px;
+    text-align: center;
+}
+.alarmBox li:hover .alarmDetail {
+    display: block;
 }
