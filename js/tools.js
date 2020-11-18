@@ -90,10 +90,10 @@ function setIndexImg(name) {
             break;
         case "舒适度":
             return "indexImg8";
+            break;
         case "晾晒":
             return "indexImg9";
             break;
-
         default:
             break;
     }
